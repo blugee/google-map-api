@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title> My Form </title>
+</head>
+
+<body>
+    <!-- <form name="registration" onSubmit="data()" autocomplete="on"> -->
+    <div class="form">
+        <h3>Add new City</h3>
+        <label>Country</label>
+        <input type="text" id='country' name="country" value="" required>
+        <br><br>
+        <label>City</label>
+        <input type="text" id="name" name="name" value="" required>
+        <br><br>
+        <label>Latitude</label>
+        <input type="text" id="lati" name="latitude" value="" required>
+        <br><br>
+        <label>Longitude</label>
+        <input type="text" id="long" name="longitude" value="" required>
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="data()">Submit</button>
+    </div>
+    <!-- </form> -->
+
+</body>
+
+<script>
+
+    function data() {
+        let data = {
+            country: document.getElementById('country').value,
+            name: document.getElementById('name').value,
+            latitude: document.getElementById('lati').value,
+            longitude: document.getElementById('long').value
+        }
+
+        async function postData(url = '', data = {}) {
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                return response.json();
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        postData('/add-city', data)
+            .then(data => {
+                if (data.code = "err")
+                    alert(data.message);
+                else {
+                    document.getElementById('name').setAttribute("value", "");
+                    document.getElementById('lati').setAttribute("value", "");
+                    document.getElementById('long').setAttribute("value", "");
+                    alert(data.message);
+                }
+            });
+    }
+
+</script>
+
+</html>

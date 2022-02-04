@@ -1,0 +1,35 @@
+[
+    {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+            "location": {
+                "lat": 34.9417857,
+                "lng": 69.2630666
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 34.94480655,
+                    "lng": 69.26925754999999
+                },
+                "southwest": {
+                    "lat": 34.94077875000001,
+                    "lng": 69.26100295000002
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+        "icon_background_color": "#7B9EB0",
+        "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+        "name": "Bagram Air Base",
+        "place_id": "ChIJ7UgiGcGZ0TgRFPniA7CvR88",
+        "rating": 0,
+        "reference": "ChIJ7UgiGcGZ0TgRFPniA7CvR88",
+        "scope": "GOOGLE",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 0,
+        "vicinity": "W7R7+P68, Bagram"
+    }
+]

@@ -1,0 +1,53 @@
+{
+    "Sheet1": [
+        {
+            "Country": "Algeria",
+            "undefined": "The Culture Trip"
+        },
+        {
+            "City": "Taghit",
+            "Latitude": "30.92004",
+            "Longitude": "-2.03028"
+        },
+        {
+            "City": "Annaba",
+            "Latitude": "36.9142",
+            "Longitude": "7.7427"
+        },
+        {
+            "City": "Tlemcen",
+            "Latitude": "34.8829",
+            "Longitude": "1.3167"
+        },
+        {
+            "City": "Constantine",
+            "Latitude": "36.357",
+            "Longitude": "6.639"
+        },
+        {
+            "City": "Ghardaia",
+            "Latitude": "32.4944",
+            "Longitude": "3.6445"
+        },
+        {
+            "City": "Timimoun",
+            "Latitude": "29.2617",
+            "Longitude": "0.2416"
+        },
+        {
+            "City": "Djanet",
+            "Latitude": "24.5542",
+            "Longitude": "9.4854"
+        },
+        {
+            "City": "Oran",
+            "Latitude": "35.6987",
+            "Longitude": "0.6349"
+        },
+        {
+            "City": "Batna",
+            "Latitude": "35.5634",
+            "Longitude": "6.189"
+        }
+    ]
+}
