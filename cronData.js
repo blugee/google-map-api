@@ -2,7 +2,7 @@ var cron = require('node-cron');
 const { CityModel } = require('./models/City');
 const { ThingToDoModel } = require('./models/things_to_do');
 const { connectDB } = require('./config/database');
-
+var secretKey = process.env.SECRET_KEY_GOOGLE
 
 const thingsTodo = async () => {
     connectDB()
@@ -17,7 +17,7 @@ const thingsTodo = async () => {
         try {
 
             const data = await axios.get(
-                `https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=${next}&key=${"AIzaSyCufDPVbMuP4Qdlg--Teu0dW2urVa2iQuM"}`
+                `https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=${next}&key=${secretKey}`
             )
 
             if (data.data.status === "OK") {
@@ -39,7 +39,7 @@ const thingsTodo = async () => {
 
     const dataFn = async (latitude, longitude, radius, place, country, id) => {
         try {
-            const data = await axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&keyword="things to do in ${place}"&rankby=prominence&periods&key=AIzaSyCufDPVbMuP4Qdlg--Teu0dW2urVa2iQuM`)
+            const data = await axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&keyword="things to do in ${place}"&rankby=prominence&periods&key=${secretKey}`)
 
             if (data.data.status === "OK") {
                 dataTodo = dataTodo.concat(data.data.results)
